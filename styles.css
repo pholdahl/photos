@@ -66,6 +66,7 @@ nav {
 }
 
 #right-nav > a {
+  /* color: white; */
   display: inline-block;
   margin: 1rem;
 }
@@ -194,7 +195,7 @@ ul {
 
 .enlarged {
   position: absolute;
-  width: 30vw;
+  width: 20vw;
   /* height: 50vh; */
   top: 50%;
   left: 50%;

@@ -280,12 +280,12 @@ const toggleEnlarge = (element) => {
   const a = element.querySelector("a");
 
   // Check the current font size and toggle it
-  if (span.style.fontSize === "130px" && a.style.fontSize === "30px") {
+  if (span.style.fontSize === "50px" && a.style.fontSize === "20px") {
     span.style.fontSize = "";
     a.style.fontSize = "";
   } else {
-    span.style.fontSize = "130px";
-    a.style.fontSize = "30px";
+    span.style.fontSize = "50px";
+    a.style.fontSize = "20px";
   }
 };
 
