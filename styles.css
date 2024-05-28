@@ -1,0 +1,543 @@
+/* Alt av verdier som repeteres kan skrives som variabler skriv dem ned under her */
+* {
+  font-size: 16px;
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  --main-air: 2rem;
+  --double-air: calc(var(--main-air) * 2);
+  --font-size: 2.2rem;
+  --font-size-big: calc(var(--font-size) * 3);
+  --heading-spacing: 0.5rem;
+  --main-white: #ffffff;
+  --main-background-color: #000000;
+  --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --picture-font: #000000;
+}
+@font-face {
+  font-family: "pwchalkmedium";
+  src: url("static/font/pwchalk-webfont.woff2") format("woff2"),
+    url("static/font/pwchalk-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dk_poison_ivyregular";
+  src: url("static/font/dkpoisonivy-qqpv-webfont.woff2") format("woff2"),
+    url("static/font/dkpoisonivy-qqpv-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "marker_markregular";
+  src: url("static/font/markermark-regular-webfont.woff2") format("woff2"),
+    url("static/font/markermark-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NoneShallPass";
+  src: url("static/font/NoneShallPass-B598.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "stampFont";
+  src: url("font/Rubberstamp-R54A.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  /* padding: 1rem 2rem; */
+  background: black;
+  color: white;
+}
+
+#left-nav > select {
+  margin-left: 1rem;
+}
+
+#right-nav > a {
+  display: inline-block;
+  margin: 1rem;
+}
+
+#right-nav > a:hover {
+  color: white;
+  /* background: white; */
+}
+
+/* nav > a {
+  margin: 1rem;
+} */
+
+nav > a:hover {
+  color: white;
+  /* background: white; */
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--main-font);
+  color: var(--main-white);
+  font-family: Georgia, serif;
+  background: #393a3a;
+  height: 100%;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+main {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  padding-bottom: 2rem;
+  /* border: 1px solid red; */
+  /* margin: 0 auto; */
+  background-image: linear-gradient(#332d21, #7f7053),
+    url(static/images/oldWoodBGMobileBig.jpg);
+  background-size: 160%;
+  background-repeat: repeat-y;
+  background-blend-mode: saturation;
+  z-index: 0;
+  backdrop-filter: blur(1px);
+  width: 70vw;
+  /* height: 100vh; */
+  min-height: 1440px;
+  box-shadow: 0 0 25px 20px black;
+}
+
+header {
+  padding-top: var(--double-air);
+}
+
+h1 {
+  font-family: "NoneShallPass";
+  letter-spacing: var(--heading-spacing);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-size-big);
+  color: black;
+  opacity: 0.8;
+  text-shadow: 1px 1px 1px rgb(46, 29, 4);
+}
+h2 {
+  font-family: "NoneShallPass";
+  text-transform: capitalize;
+  font-style: normal;
+  letter-spacing: var(--heading-spacing);
+  color: black;
+  opacity: 0.8;
+  padding: 5px 0px 50px 0px;
+  font-size: 2.8rem;
+  text-shadow: 0 0 1px black;
+}
+
+a {
+  /* text-decoration: none; */
+  color: black;
+}
+
+a:visited {
+  color: gray;
+}
+
+ul {
+  padding: 50px 0px 50px 0px;
+  text-align: left;
+}
+
+.reflection > p {
+  text-align: left;
+}
+
+#content {
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+
+.sectionA img {
+  max-width: 100%;
+}
+
+.picture {
+  margin: 25px 50px 25px 50px;
+  background-color: var(--main-white);
+  object-fit: contain;
+  text-align: center;
+  color: var(--picture-font);
+  width: 20%;
+  /* height: 100%; */
+  padding: 5px;
+  padding-bottom: 1rem;
+  box-shadow: 0px 10px 35px 10px var(--main-background-color);
+  /* display: inline-block; */
+  vertical-align: middle;
+  font-family: "marker_markregular";
+  position: absolute;
+  cursor: grab;
+  z-index: 1;
+}
+
+.picture:active {
+  cursor: grabbing;
+  /* z-index: 1000; Ensure the dragging element is on top */
+}
+
+.enlarged {
+  position: absolute;
+  width: 30vw;
+  /* height: 50vh; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.sectionA img {
+  max-width: 100%;
+  border: 1px solid black;
+  filter: saturate(0.2);
+}
+
+.sectionA img:hover {
+  filter: saturate(1.2);
+}
+
+/* #pic1 {
+  position: absolute;
+  transform: rotate(10deg);
+}
+#pic2 {
+  position: absolute;
+  transform: rotate(-5deg);
+}
+#pic3 {
+  position: absolute;
+  max-width: 100%;
+  transform: rotate(-7deg);
+}
+#pic4 {
+  position: absolute;
+  max-width: 100%;
+  transform: rotate(-5deg);
+}
+#pic5 {
+  position: absolute;
+  max-width: 100%;
+  transform: rotate(5deg);
+}
+#pic6 {
+  position: absolute;
+  max-width: 100%;
+  transform: rotate(-2deg);
+} */
+
+.picture > span {
+  font-family: "marker_markregular";
+  font-size: var(--font-size);
+}
+
+.coffee {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coffee a {
+  color: black;
+  opacity: 0.8;
+  display: block;
+  position: relative;
+  bottom: 21rem;
+  right: 4rem;
+  font-family: "NoneShallPass";
+  font-size: 5rem;
+  z-index: 1;
+}
+
+.coffee > figure > a > img {
+  border: none;
+  -webkit-filter: drop-shadow(22px 30px 25px rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(22px 30px 25px rgba(0, 0, 0, 0.9));
+}
+
+#cup {
+  display: block;
+  opacity: 1;
+  left: 6rem;
+  bottom: 3rem;
+  position: relative;
+  transform: rotate(-55deg);
+  max-width: 70%;
+  border: none;
+  z-index: 2;
+}
+
+.still:hover {
+  filter: sepia(0.4);
+}
+
+.moved {
+  animation: move;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.form {
+  max-width: 60vw;
+  margin: 0 auto;
+  color: black;
+}
+
+fieldset {
+  border: 1px solid black;
+  padding: 2rem;
+  margin: 2rem 0;
+  background-color: white;
+  box-shadow: 0 0 10px 5px;
+}
+
+label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.8rem;
+  background: white;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.form ul li {
+  font-size: 1.8rem;
+}
+
+.form ul {
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 10px 5px;
+}
+
+.form input {
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+.formButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.formButton {
+  font-family: var(--main-font);
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  /* background: black; */
+  color: black;
+  background-color: #efefef;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.formButton:hover {
+  background-color: #dcdcdc;
+}
+
+footer {
+  max-width: 70vw;
+  background: black;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+  height: 200px;
+  box-shadow: 0 0 25px 20px black;
+}
+
+footer p {
+  font-size: 3rem;
+  font-family: "marker_markregular";
+}
+
+.photoUploadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center;
+  margin: 5px;
+  padding: 2rem; */
+}
+
+/* .photoDescriptionInput {
+  margin-top: auto;
+} */
+
+@keyframes move {
+  from {
+    transform: rotate(-55deg) scale(1) skew(0deg) translate(0px);
+  }
+  to {
+    transform: rotate(10deg) scale(1) skew(0deg) translateX(-350px)
+      translateY(300px);
+  }
+}
+
+@media (max-width: 1400px) {
+  * {
+    font-size: 10px;
+  }
+
+  main {
+    width: 100%;
+  }
+  #cup {
+    max-width: 60%;
+  }
+
+  .reflection ul li {
+    margin-left: 1rem;
+  }
+
+  footer {
+    max-width: 100%;
+    height: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: 8px;
+  }
+
+  #cup {
+    max-width: 40%;
+    left: 20rem;
+    bottom: 3rem;
+  }
+
+  .picture {
+    margin: 25px 25px 25px 20px;
+    background-color: var(--main-white);
+    object-fit: contain;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px var(--main-white);
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .reflection {
+    max-width: 85vw;
+  }
+  footer {
+    height: 100px;
+  }
+
+  @media (max-width: 650px) {
+    * {
+      font-size: 6px;
+    }
+
+    section {
+      text-align: center;
+    }
+    h1 {
+      padding-bottom: 4rem;
+    }
+
+    h2 {
+      margin: 1rem auto 0 auto;
+      font-size: 3rem;
+      max-width: 90%;
+    }
+
+    .coffee a {
+      font-size: 3rem;
+      left: 2rem;
+    }
+
+    .picture {
+      margin: 25px 25px 25px 20px;
+      background-color: var(--main-white);
+      object-fit: contain;
+      text-align: center;
+      width: 50%;
+      padding: 10px;
+      border: 1px solid rgb(255, 255, 255);
+      box-shadow: 0px 0px 5px var(--main-white);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .picture > p > span {
+      font-size: 3.8rem;
+    }
+
+    .reflection {
+      max-width: 85vw;
+    }
+
+    .reflection p {
+      font-size: 2.2rem;
+      line-height: 3.5rem;
+      background: white;
+      padding: 2rem;
+      margin: 1rem 0;
+      box-shadow: 0 0 10px 5px;
+    }
+
+    .reflection ul li {
+      font-size: 2.2rem;
+      line-height: 3.5rem;
+    }
+
+    .reflection ul {
+      padding-left: 1rem 0;
+      font-size: 2.2rem;
+      line-height: 2.8rem;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px 5px;
+    }
+
+    footer {
+      height: 50px;
+    }
+
+    footer > p {
+      font-size: 2rem;
+    }
+  }
+}

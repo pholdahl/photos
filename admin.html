@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="admin.js" type="module" defer></script>
+    <!-- <script src="admin.js" type="module" defer></script> -->
+    <title>Upload Photos</title>
+  </head>
+  <body>
+    <nav>
+      <div id="left-nav">
+        <!-- <select id="select-album"></select> -->
+      </div>
+      <div id="right-nav">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Upload Photos</a>
+        <a href="admin.html">Sign In</a>
+      </div>
+    </nav>
+    <main id="main">
+      <form id="signInForm" class="form">
+        <header>
+          <h1>Sign in</h1>
+        </header>
+        <fieldset>
+          <label for="emailInput"
+            >Email:
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </label>
+          <label for="passwordInput"
+            >Password:
+            <input
+              type="password"
+              id="passwordInput"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </label>
+        </fieldset>
+        <button class="formButton" type="submit">Sign In</button>
+        <button class="formButton" id="signOutButton">Sign Out</button>
+      </form>
+    </main>
+  </body>
+</html>

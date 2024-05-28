@@ -1,0 +1,93 @@
+{
+  "albums": [
+    {
+      "id": 0,
+      "headline": "Summer 2019",
+      "description": "Memories of the summer of 2019 before the pandemic"
+    },
+    {
+      "id": 1,
+      "headline": "Winter 2020",
+      "description": "Winter vacation in the mountains"
+    },
+    {
+      "headline": "TestAlbum",
+      "description": "test",
+      "id": 2
+    }
+  ],
+  "photos": [
+    {
+      "id": 0,
+      "albumId": 0,
+      "url": "https://i.ibb.co/bdgmrFJ/tron.jpg",
+      "description": "Beach day with family"
+    },
+    {
+      "id": 1,
+      "albumId": 0,
+      "url": "https://i.ibb.co/hRcGb5L/diehard.jpg",
+      "description": "Sunset view from the mountain top"
+    },
+    {
+      "id": 2,
+      "albumId": 0,
+      "url": "https://i.ibb.co/tPc7LJ2/assange.jpg",
+      "description": "Exploring the local market"
+    },
+    {
+      "id": 3,
+      "albumId": 0,
+      "url": "https://i.ibb.co/RpsZvK0/matrix.jpg",
+      "description": "Our cozy cabin getaway"
+    },
+    {
+      "id": 4,
+      "albumId": 0,
+      "url": "https://i.ibb.co/fNdqmJf/minorityreport.jpg",
+      "description": "Kayaking adventure on the lake"
+    },
+    {
+      "id": 5,
+      "albumId": 0,
+      "url": "https://i.ibb.co/bdgmrFJ/tron.jpg",
+      "description": "Historical ruins visited at sunset"
+    },
+    {
+      "url": "https://i.ibb.co/fqn1hpq/Screenshot-2024-04-21-at-22-38-17.png",
+      "description": "Test",
+      "albumId": 2,
+      "id": 6
+    },
+    {
+      "url": "https://i.ibb.co/BTxxQLQ/Screenshot-2024-04-21-at-22-35-08.png",
+      "description": "Test",
+      "albumId": 2,
+      "id": 7
+    },
+    {
+      "url": "https://i.ibb.co/C7HcLTB/Screenshot-2024-04-21-at-22-36-55.png",
+      "description": "Test",
+      "albumId": 2,
+      "id": 8
+    },
+    {
+      "url": "https://i.ibb.co/ygkybSF/Screenshot-2024-04-21-at-22-32-12.png",
+      "description": "Test",
+      "albumId": 2,
+      "id": 9
+    },
+    {
+      "url": "https://i.ibb.co/cQ5Y09b/Screenshot-2024-04-21-at-22-29-18.png",
+      "description": "Test",
+      "albumId": 2,
+      "id": 10
+    },
+    {
+      "url": "https://i.ibb.co/6Z98K8k/Screenshot-2024-04-21-at-22-24-58.png",
+      "description": "Test",
+      "albumId": 2,
+      "id": 11
+    }
+  ]
+}

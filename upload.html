@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="upload.js" type="module" defer></script>
+    <title>Upload Photos</title>
+  </head>
+  <body>
+    <nav>
+      <div id="left-nav">
+        <!-- <select id="select-album"></select> -->
+      </div>
+      <div id="right-nav">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Upload Photos</a>
+        <a href="admin.html">Sign In</a>
+      </div>
+    </nav>
+    <main id="main">
+      <form id="uploadForm" class="form">
+        <header>
+          <h1>Create Polaroid Album</h1>
+        </header>
+        <fieldset>
+          <!-- <legend>Album Information</legend> -->
+          <label for="headerInput">
+            Headline for the album (What are the photos about?):
+            <input
+              type="text"
+              id="headerInput"
+              name="header"
+              placeholder="Enter headline text"
+              required
+          /></label>
+          <label for="contentDescription"
+            >Additional Description (A short line underneath headline):</label
+          >
+          <input
+            type="text"
+            id="contentDescription"
+            name="description"
+            placeholder="Enter content description"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <label class="formButton">
+            <input
+              type="file"
+              class="formButton"
+              id="photoUpload"
+              name="photos"
+              accept="image/*"
+              multiple
+              required
+            />Choose Photos
+          </label>
+          <div
+            id="photoGrid"
+            style="
+              display: grid;
+              grid-template-columns: repeat(3, 33%);
+              gap: 10px;
+            "
+          ></div>
+          <button class="formButton" type="button" id="createAlbumButton">
+            Create Album
+          </button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
