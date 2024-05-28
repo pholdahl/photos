@@ -49,7 +49,7 @@ No frameworks are used; just plain JavaScript working with an external database.
 
 ## Contributors
 
-Co-students when we worked together on the initial Obligatory Assignment:
+Co-students when we worked together on the initial obligatory assignment:
 
 - [LKielland](https://github.com/LKielland)
 - [wiikh](https://github.com/wiikh)
