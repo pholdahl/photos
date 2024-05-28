@@ -1,6 +1,7 @@
 # Photos
 
-![Project Logo](https://i.ibb.co/cX0GyxB/photos-Logo.png)
+![Project Logo](https://i.ibb.co/cX0GyxB/photos-Logo.png)</br>
+[To website](https://pholdahl.github.io/photos/index.html)
 
 ## Table of Contents
 
