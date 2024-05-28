@@ -1,7 +1,7 @@
 # Photos
 
 ![Project Logo](https://i.ibb.co/cX0GyxB/photos-Logo.png)</br>
-[To website](https://pholdahl.github.io/photos/index.html)
+<a href="https://pholdahl.github.io/photos/index.html" target="_blank">To website</a>
 
 ## Table of Contents
 
@@ -44,7 +44,7 @@ The project is still in development, with some issues that need to be addressed,
 - CSS3
 - Vanilla JavaScript
 - Supabase database
-- Image service provider: [imgbb.com](https://imgbb.com)
+- Image service provider: <a href="https://imgbb.com" target="_blank">imgbb.com</a>
 
 No frameworks are used; just plain JavaScript working with an external database.
 
